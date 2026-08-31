@@ -1,0 +1,16 @@
+{
+  "name": "taskkit",
+  "version": "1.0.0",
+  "description": "A small typed task/order toolkit — the demo app for an AI PR-build-fixer.",
+  "license": "MIT",
+  "scripts": {
+    "build": "tsc",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "date-fns": "3.6.0"
+  },
+  "devDependencies": {
+    "typescript": "5.5.4"
+  }
+}

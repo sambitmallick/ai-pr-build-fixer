@@ -1,0 +1,19 @@
+name: build
+
+# PR-only: this build runs exclusively for pull requests. No PR, no build.
+# (workflow_dispatch is here just so the demo can trigger a manual run.)
+on:
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+      - run: npm ci
+      - name: Type-check and build
+        run: npm run build
